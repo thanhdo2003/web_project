@@ -21,15 +21,17 @@ class FormLogin
 
     <body>
       <div class="container-fluid">
-        <div class="bg">
-          <div class="dark-bg"></div>
-        </div>
         <div class="row justify-content-center">
-          <div class="col-md-6 col-sm-8 col-xs-12 row-container">
+
+          <div class="col-md-6 col-lg-6 d-none d-md-block">
+            <img class="img-fluid h-100" src="../assets/Images/ad-form.gif" alt="adv">
+          </div>
+
+          <div class="col-md-6 col-lg-6 d-flex justify-content-center align-items-center" style="background-color: #b0d4b8;">
             <form action="../Controllers/C_SignIn.php" method="post" enctype="multipart/form" class="needs-validation" novalidate>
               <input type='hidden' name='SignIn' value='true'>
-              <h1 class="text-center"><a style="text-decoration:none;color:white;" href="../../../index.php">FIND WORK</a></h1>
-              <h2 class="text-center">Đăng nhập</h2>
+              <h1 class="text-left"><a style="text-decoration:none;color:black;" href="../../../index.php">SEEKER</a></h1>
+              <h1 class="text-left">BẠN TÌM - CHÚNG TÔI CÓ</h1><br>
               <div class="form-group">
                 <label for="username">Tài khoản</label>
                 <input name="taikhoan" value='<?= $previousUser ?>' type="text" class="form-control py-4" id="username" required>
@@ -38,7 +40,7 @@ class FormLogin
               <div class="form-group mb-0">
                 <label for="password" class="label">Mật khẩu</label>
                 <input name='matkhau' value='<?= $previousPass ?>' type="password" class="form-control py-4" id="password" required>
-                <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
+                <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div><br>
               </div>
               <div class="form-group">
                 <label for="select">Bạn là</label>
@@ -46,21 +48,27 @@ class FormLogin
                   <option value="0" style="color:black !important;">Người xin việc</option>
                   <option value="1" style="color:black !important;">Nhà tuyển dụng</option>
                 </select>
-              </div>
+              </div><br>
 
-              <div class='form-group form-check'>
+              <!-- <div class='form-group form-check'>
                 <input type='checkbox' name='remember' value='1' class='form-check-input' id='exampleCheck1'>
                 <label class='form-check-label' for='exampleCheck1'>Remember me</label>
+              </div> -->
+
+              <div class="d-grid gap-2">
+                <button class="mx-auto btn btn-dark fa-lg mb-3" type="submit">Đăng nhập</button>
               </div>
 
-              <div class="pass">
-                <a href="../../index.php">Quên mật khẩu</a>
-              </div>
-              <div class="offset-sm-4">
+              <!-- <div class="offset-sm-4">
                 <button type="submit" class="mx-auto">Đăng nhập</button>
+              </div> -->
+              
+              <div class="pass">
+                <a href="../../index.php">Quên mật khẩu?</a>
               </div>
+
               <div class="">
-                <div class="signup_link">Bạn chưa có tài khoản? <a href="./C_Register.php">Đăng kí</a>
+                <div class="signup_link">Bạn chưa có tài khoản? <a href="./C_Register.php">Đăng ký</a>
                 </div>
               </div>
             </form>

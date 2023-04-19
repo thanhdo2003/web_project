@@ -10,26 +10,22 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- My CSS and JQuery -->
   <link href="../../../src/assets/Styles/style.css" rel="stylesheet">
-  <!-- <script type="text/javascript" src="./index.js"></script>  -->
-  <!-- <style>
-    .bg {
-      overflow-y: scroll;
-    }
-  </style> -->
 </head>
 
 <body>
   <div class="container-fluid">
-    <div class="bg">
-      <div class="dark-bg"></div>
-    </div>
     <div class="row justify-content-center">
-      <div class="col-md-6 col-sm-8 col-xs-12 row-container my-5">
-        <form id="form" action="../../../src/Controllers/C_Register.php" method="post" enctype="multipart/form"class="needs-validation" novalidate>
-          <h1 class="text-center"><a style="text-decoration:none;color:white;" href="../../../index.php">FIND WORK</a></h1>
-          <h2 class="text-center">Đăng kí</h2>
+
+      <div class="col-md-6 col-lg-6 d-none d-md-block">
+        <img class="img-fluid h-100" src="../assets/Images/ad-form.gif" alt="adv">
+      </div>
+
+      <div class="col-md-6 col-lg-6 d-flex justify-content-center align-items-center" style="background-color: #b0d4b8;">
+      <form id="form" action="../../../src/Controllers/C_Register.php" method="post" enctype="multipart/form"class="needs-validation" novalidate>
+          <input type='hidden' name='SignIn' value='true'>
+          <h1 class="text-left"><a style="text-decoration:none;color:black;" href="../../../index.php">SEEKER</a></h1>
+          <h1 class="text-left">BẠN TÌM - CHÚNG TÔI CÓ</h1><br>
           <div class="form-group">
             <label for="username">Tài khoản</label>
             <input name="taikhoan" type="text" class="form-control py-3 forTV" id="username" required>
@@ -72,13 +68,15 @@
             <label for="website">Website</label>
             <input name="website" type="text" class="form-control py-3 forTD" id="website" disable>
             <div class="invalid-feedback">Vui lòng nhập website.</div>
+          </div><br>
+
+          <div class="d-grid gap-2">
+            <button type="submit" name='dangky' class="mx-auto btn btn-dark fa-lg mb-3">Đăng Ký</button>
           </div>
-          <div class="offset-sm-4">
-            <button type="submit" name='dangky' class="mx-auto">Đăng Kí</button>
-          </div>
+
           <div class="">
-            <div class="signup_link">Đã có tài khoản? <a href="./C_SignIn.php">Đăng nhập</a>
-            </div>
+            <div class="signup_link">Bạn đã có tài khoản? <a href="./C_SignIn.php">Đăng nhập</a>
+            </div><br>
 
           </div>
         </form>
